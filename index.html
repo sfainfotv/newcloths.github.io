@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clothing Business</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product-card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 200px;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      width: 100%;
+      bottom: 0;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      nav ul li {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .product-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Our Clothing Store</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>Featured Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="images111.jpg" alt="Product 1">
+        <h3>Product 1</h3>
+        <p>$20.00</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images2.jpg" alt="Product 2">
+        <h3>Product 2</h3>
+        <p>$25.00</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <!-- Add more products here -->
+    </div>
+  </section>
+
+  <section id="shop">
+    <h2>Shop Now</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="images111.jpg" alt="Product 3">
+        <h3>Product 3</h3>
+        <p>$30.00</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images2.jpg" alt="Product 4">
+        <h3>Product 4</h3>
+        <p>$35.00</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <!-- Add more products here -->
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <p>We offer tailoring, repairs, and custom designs.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We are a family-owned business passionate about fashion.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Clothing Business. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // JavaScript for Interactivity
+
+    // Add to Cart Functionality
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    addToCartButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        alert('Item added to cart!');
+        // You can add more logic here to update the cart
+      });
+    });
+
+    // Contact Form Submission
+    const contactForm = document.getElementById('contact-form');
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thank you for contacting us!');
+      contactForm.reset();
+    });
+  </script>
+</body>
+</html>
